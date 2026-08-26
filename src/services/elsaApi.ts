@@ -1,4 +1,4 @@
-const API_BASE = process.env.EXPO_PUBLIC_API_URL || 'https://elsa.pin-yi.uk';
+const API_BASE = process.env.EXPO_PUBLIC_API_URL || 'https://elsa-proxy.pc1777a.workers.dev';
 
 export const getSystemHealth = async () => {
   try {

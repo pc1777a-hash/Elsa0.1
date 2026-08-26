@@ -2,7 +2,7 @@ export default {
   async fetch(request: Request, env: any, ctx: any): Promise<Response> {
     // 代理所有請求到後端 elsa.pin-yi.uk
     const url = new URL(request.url);
-    const targetUrl = `https://elsa.pin-yi.uk${url.pathname}${url.search}`;
+    const targetUrl = `https://elsa-proxy.pc1777a.workers.dev${url.pathname}${url.search}`;
     const newRequest = new Request(targetUrl, {
       method: request.method,
       headers: request.headers,
