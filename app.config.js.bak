@@ -1,0 +1,31 @@
+module.exports = {
+  expo: {
+    name: "Elsa Mobile",
+    slug: "elsa-mobile",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    userInterfaceStyle: "automatic",
+    splash: {
+      image: "./assets/splash.png",
+      resizeMode: "contain",
+      backgroundColor: "#ffffff"
+    },
+    ios: {
+      bundleIdentifier: "com.elsa.mobile",
+      supportsTablet: true
+    },
+    android: {
+      package: "com.elsa.mobile",
+      versionCode: 1,
+      adaptiveIcon: {
+        foregroundImage: "./assets/adaptive-icon.png",
+        backgroundColor: "#ffffff"
+      }
+    },
+    extra: {
+      ELSA_API_URL: process.env.ELSA_API_URL || "https://elsa.pin-yi.uk",
+      EXPO_PUBLIC_API_URL: process.env.EXPO_PUBLIC_API_URL || "https://elsa.pin-yi.uk"
+    }
+  }
+};

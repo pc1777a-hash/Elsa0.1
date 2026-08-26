@@ -1,0 +1,8 @@
+--- exchanges ---
+{"keys":{"binance":false,"bitget":true,"bybit":false,"coinbase":false,"gate":false,"kraken":false,"kucoin":false,"mexc":false,"okx":true},"selected":"binance","supported":["binance","okx","bybit","bitget","gate","mexc","kucoin","kraken","coinbase"]}
+
+--- balance ---
+{"balance":"0.0000 USDT"}
+
+--- positions ---
+{"positions":[]}

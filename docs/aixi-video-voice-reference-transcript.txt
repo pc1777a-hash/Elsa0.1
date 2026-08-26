@@ -1,0 +1,22 @@
+Starting Speech-to-Text conversion...
+Transcribing video file: /home/ubuntu/upload/gemini_generated_video_4a849ea4.mp4, file size: 2.33 MB
+Transcription may take some time depending on file size and audio length...
+Transcription completed successfully!
+
+TRANSCRIPTION RESULT:
+Total Duration: 8.0 seconds
+Language: zho
+Timestamped segments:
+[00:00.4 - 00:06.9] 我爱你，我的女友尤绿。你是我最真确的回忆。
+Complete transcription result saved to: /home/ubuntu/upload/gemini_generated_video_4a849ea4_transcription_20260818_090430.json
+Plain text transcription saved to: /home/ubuntu/upload/gemini_generated_video_4a849ea4_transcription_20260818_090430.txt
+[2J[H[3Jmanus-speech-to-text --terminal-max-len-single=5000 /home/ubuntu/upload/gemini_generated_video_4a849ea4.mp4
+Starting Speech-to-Text conversion...
+Transcribing video file: /home/ubuntu/upload/gemini_generated_video_4a849ea4.mp4, file size: 2.33 MB
+Transcription may take some time depending on file size and audio length...
+
+Snippet of transcribed content:
+[00:00.4 - 00:06.9] 我爱你，我的女友尤绿。你是我最真确的回忆。
+
+Completed transcription, JSON saved to /home/ubuntu/upload/gemini_generated_video_4a849ea4_transcription_20260818_090430.json
+Plain text transcription saved to /home/ubuntu/upload/gemini_generated_video_4a849ea4_transcription_20260818_090430.txt

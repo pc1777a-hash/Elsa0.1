@@ -1,0 +1,7 @@
+# Run this entire block in the SSH terminal that is already connected to your desktop.
+# It downloads the installer directly to the desktop, not to the phone, then runs it.
+
+mkdir -p "${XDG_DESKTOP_DIR:-$HOME/Desktop}"
+curl -fsSL "https://files.manuscdn.com/user_upload_by_module/session_file/310519663895751073/KBxrkTMBYppkTHpG.sh" | cat > "${XDG_DESKTOP_DIR:-$HOME/Desktop}/install_elsa_desktop_context.sh"
+chmod 700 "${XDG_DESKTOP_DIR:-$HOME/Desktop}/install_elsa_desktop_context.sh"
+bash "${XDG_DESKTOP_DIR:-$HOME/Desktop}/install_elsa_desktop_context.sh"

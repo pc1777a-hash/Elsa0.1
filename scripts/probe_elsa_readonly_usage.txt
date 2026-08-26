@@ -1,0 +1,15 @@
+在桌機 SSH 終端機執行下列指令。腳本僅執行 GET 請求，以及讀取 PM2 與 TCP 監聽狀態；不會修改 `.env`、不會重啟程序，也不會下單。
+
+```bash
+curl -fsSL "https://files.manuscdn.com/user_upload_by_module/session_file/310519663895751073/VWgPycTYmrZEdLQQ.sh" -o "$HOME/Desktop/probe_elsa_readonly.sh"
+chmod 700 "$HOME/Desktop/probe_elsa_readonly.sh"
+bash "$HOME/Desktop/probe_elsa_readonly.sh"
+```
+
+若你的本機服務不是 `127.0.0.1:3000`，先指定實際位址再執行，例如：
+
+```bash
+ELSA_LOCAL_URL="http://127.0.0.1:你的埠號" bash "$HOME/Desktop/probe_elsa_readonly.sh"
+```
+
+完成後，回傳桌面資料夾 `ELSA-readonly-probe-時間戳/README.txt` 中的文字，以及 `responses/` 裡 HTTP 200 的檔案內容即可。

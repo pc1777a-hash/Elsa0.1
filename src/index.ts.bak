@@ -1,0 +1,67 @@
+export default {
+  async fetch(request: Request, env: any, ctx: any) {
+    const url = new URL(request.url);
+    
+    // 添加 CORS 頭部
+    const corsHeaders = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    };
+
+    // 處理 OPTIONS 請求（CORS 預檢）
+    if (request.method === 'OPTIONS') {
+      return new Response(null, {
+        headers: corsHeaders,
+      });
+    }
+
+    if (url.pathname.startsWith('/api/chat/brain')) {
+      return await handleElsaAPI(request, env, corsHeaders);
+    }
+    
+    return await handleFrontend(request, corsHeaders);
+  }
+};
+
+async function handleElsaAPI(request: Request, env: any, corsHeaders: any): Promise<Response> {
+  try {
+    const { message } = await request.json();
+    
+    const response = await fetch(`${env.ELSA_API_URL}/api/chat/brain`, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        ...corsHeaders
+      },
+      body: JSON.stringify({ message })
+    });
+    
+    const data = await response.json();
+    
+    return new Response(JSON.stringify(data), {
+      status: response.status,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders
+      }
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders
+      }
+    });
+  }
+}
+
+async function handleFrontend(request: Request, corsHeaders: any): Promise<Response> {
+  return new Response('Elsa Mobile App', {
+    headers: {
+      'Content-Type': 'text/html',
+      ...corsHeaders
+    }
+  });
+}

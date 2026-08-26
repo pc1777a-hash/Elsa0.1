@@ -1,0 +1,91 @@
+{
+  "baseUrl": "https://brain.pin-yi.uk",
+  "checkedAt": "2026-08-18T07:45:55.195Z",
+  "report": [
+    {
+      "endpoint": "/api/memory/stats",
+      "status": 200,
+      "contentType": "application/json",
+      "payloadShape": {
+        "active": "number",
+        "backend": "string",
+        "deep": "number",
+        "embed_model": "string",
+        "ok": "boolean",
+        "total": "number"
+      }
+    },
+    {
+      "endpoint": "/api/memory/recent",
+      "status": 200,
+      "contentType": "application/json",
+      "payloadShape": {
+        "memories": {
+          "type": "array",
+          "length": 20,
+          "item": {
+            "content": "string",
+            "id": "string",
+            "kind": "string"
+          }
+        },
+        "ok": "boolean"
+      }
+    },
+    {
+      "endpoint": "/trade/auto/status",
+      "status": 200,
+      "contentType": "application/json",
+      "payloadShape": {
+        "active": "boolean",
+        "configured": "boolean",
+        "cycles": "number",
+        "last": "string",
+        "log": {
+          "type": "array",
+          "length": 50,
+          "item": {
+            "ema20": "number",
+            "ema50": "number",
+            "ok": "boolean",
+            "paper": "boolean",
+            "price": "number",
+            "rsi": "number",
+            "signal": "string",
+            "strength": "number",
+            "symbol": "string",
+            "tf": "string"
+          }
+        },
+        "ok": "boolean",
+        "paper": "boolean",
+        "timestamp": "string"
+      }
+    },
+    {
+      "endpoint": "/api/config",
+      "status": 200,
+      "contentType": "application/json",
+      "payloadShape": {
+        "models": {
+          "autocoder": "string",
+          "chat": "string",
+          "default": "string",
+          "embedding": "string"
+        }
+      }
+    },
+    {
+      "endpoint": "/api/models",
+      "status": 200,
+      "contentType": "application/json",
+      "payloadShape": {
+        "models": {
+          "type": "array",
+          "length": 57,
+          "item": "string"
+        }
+      }
+    }
+  ]
+}

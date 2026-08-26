@@ -1,0 +1,15 @@
+{
+  "cli": {
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "production": {
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
+      },
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+      }
+    }
+  }
+}

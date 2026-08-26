@@ -1,0 +1,11 @@
+# 在桌機 SSH 終端機執行
+
+這份腳本只讀取 ELSA 專案原始碼、設定**鍵名**、PM2 中繼資料與監聽埠；不會顯示 `.env` 的值、不會修改檔案、不會重啟程序，也不會發出交易請求。
+
+```bash
+curl -fsSL "https://files.manuscdn.com/user_upload_by_module/session_file/310519663895751073/OaLguXhWQsdIQEWV.sh" -o "$HOME/Desktop/locate_elsa_routes.sh"
+chmod 700 "$HOME/Desktop/locate_elsa_routes.sh"
+ELSA_PROJECT_DIR="$HOME/elsa-native" bash "$HOME/Desktop/locate_elsa_routes.sh"
+```
+
+完成後，請提供桌面 `ELSA-route-locator-時間戳/README.txt`，以及 `route-candidates-sorted.txt` 和 `proxy-hints.txt` 的內容。檔案中若仍出現不應分享的內部網址，可先遮蔽網域或 IP，但保留路徑與埠號。

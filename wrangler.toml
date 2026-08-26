@@ -1,0 +1,6 @@
+name = "elsa-mobile"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+ELSA_API_URL = "http://100.98.242.48:3000"
